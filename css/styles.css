@@ -80,7 +80,8 @@ a {
 }
 
 a:hover {
-  color: var(--gold);
+    transform: scale(1.05);
+    color: var(--gold);
 }
 /* ---------- BRAND LOGO ---------- */
 .site-logo {
@@ -278,6 +279,7 @@ a:hover {
   color: #fff;
   border: none;
   box-shadow: 0 6px 18px rgba(11, 61, 145, 0.08);
+  margin: 1%;
 }
 
 .btn-primary:hover {
@@ -620,8 +622,7 @@ a:hover {
 }
 
 .site-footer {
-  background: linear-gradient(180deg,#ab810c 12%, #efd911 55%);
-  color: #f7efe6;
+  background-color: var(--cream);
   padding-top: 2.6rem;
   border-top: 1px solid rgba(255,255,255,0.04);
 }
@@ -629,7 +630,6 @@ a:hover {
 .footer-inner {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
 }
 
 
