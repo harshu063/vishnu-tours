@@ -469,6 +469,7 @@ a:hover {
 .fleet-slider {
   position: relative;
   overflow: hidden;
+  padding: 0 12px;
 }
 
 .fleet-mover {
@@ -511,12 +512,19 @@ a:hover {
   display: grid;
   place-items: center;
   background: rgba(255, 255, 255, 0.95);
-  border-radius: 8px;
+  border-radius: 50%;
   box-shadow: 0 8px 22px rgba(16, 24, 40, 0.08);
   cursor: pointer;
   z-index: 1050;
-}
+  font-size: 1.4rem;
+    transition: background 0.25s ease, transform 0.25s ease;
 
+}
+.fleet-nav:hover {
+  background: var(--gold, #d4af37);
+  color: #fff;
+  transform: translateY(-50%) scale(1.05);
+}
 .fleet-nav.prev {
   left: 12px;
 }
@@ -537,10 +545,18 @@ a:hover {
     flex: 0 0 90%;
     max-width: 90%;
   }
-
   .fleet-nav {
-    display: none;
+    width: 34px;
+    height: 34px;
+    font-size: 1.2rem;
+    top: 45%;
+    background: rgba(255, 255, 255, 0.85);
   }
+  .fleet-slider {
+  position: relative;
+  overflow: hidden;
+  padding: 0 12px;
+}
 }
 
 /* USP / TESTIMONIAL / BOOKING / FOOTER */
@@ -604,7 +620,7 @@ a:hover {
 }
 
 .site-footer {
-  background: linear-gradient(180deg,#dac8c1 12%, #ed7a6d 65%);
+  background: linear-gradient(180deg,#ab810c 12%, #efd911 55%);
   color: #f7efe6;
   padding-top: 2.6rem;
   border-top: 1px solid rgba(255,255,255,0.04);

@@ -10,7 +10,7 @@
 
     /* ---------------- config ---------------- */
     var HEADER_OFFSET = 72;
-    var HERO_PARALLAX_FACTOR = 0.22;
+    var HERO_PARALLAX_FACTOR = 0.15;
     var MAX_PARALLAX = 120; // px
     var TESTIMONIAL_AUTOPLAY_MS = 4000;
     var FLEET_AUTOPLAY_MS = 4500;
@@ -47,7 +47,10 @@
           var top = target.getBoundingClientRect().top + window.pageYOffset - HEADER_OFFSET;
           window.scrollTo({ top: top, behavior: prefersReduced ? 'auto' : 'smooth' });
           // fallback to ensure final position
-          setTimeout(function () { window.scrollTo({ top: top, behavior: 'auto' }); }, prefersReduced ? 0 : 600);
+setTimeout(() => {
+  if (Math.abs(window.scrollY - top) > 10)
+    window.scrollTo({ top, behavior: 'auto' });
+}, prefersReduced ? 0 : 600);
         });
       });
     })();
@@ -63,25 +66,24 @@
 
     /* ---------------- mobile nav (single source) ---------------- */
     function openNav() {
-      body.classList.add('nav-open');
-      if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
-      if (navBackdrop) navBackdrop.setAttribute('aria-hidden', 'false');
-      // prevent page scroll while panel is open
-      document.documentElement.style.overflow = 'hidden';
-      // focus first link for accessibility
-      var first = document.querySelector('.primary-nav .nav-list a');
-      if (first) first.focus();
-    }
+  body.classList.add('nav-open');
+  setTimeout(() => {
+    if (navBackdrop) navBackdrop.style.opacity = '1';
+  }, 100);
+  if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
+  document.documentElement.style.overflow = 'hidden';
+  const first = document.querySelector('.primary-nav .nav-list a');
+  if (first) first.focus({ preventScroll: true });
+}
 
     function closeNav() {
-      body.classList.remove('nav-open');
-      if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
-      if (navBackdrop) navBackdrop.setAttribute('aria-hidden', 'true');
-      // restore scroll
-      document.documentElement.style.overflow = '';
-      // return focus to hamburger
-      if (navToggle) navToggle.focus();
-    }
+  if (navBackdrop) navBackdrop.style.opacity = '0';
+  setTimeout(() => {
+    body.classList.remove('nav-open');
+    document.documentElement.style.overflow = '';
+  }, 180);
+  if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+}
 
     (function initMobileNav() {
       // If nav elements missing, no-op gracefully
@@ -126,7 +128,7 @@
         }
         var raw = Math.max(0, window.scrollY) * HERO_PARALLAX_FACTOR;
         var off = clamp(raw, 0, MAX_PARALLAX);
-        heroBg.style.transform = 'translate3d(0,' + Math.round(off) + 'px,0)';
+heroBg.style.transform = `translate3d(0,${Math.round(off)}px,0) scale(1.02)`;
         ticking = false;
       }
 
@@ -158,9 +160,13 @@
       }
 
       // ensure hero content visible quickly
-      setTimeout(function () {
-        qAll('.hero-content').forEach(function (el) { el.classList.add('visible'); });
-      }, 200);
+     setTimeout(() => {
+  document.querySelectorAll('.hero-content').forEach(el => {
+    el.classList.add('visible');
+    el.style.transitionDelay = '0.1s';
+  });
+}, 150);
+
     })();
 
     /* ------------------- filters ------------------- */
