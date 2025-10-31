@@ -209,33 +209,107 @@
     })();
 
     /* ----------------- form UX ----------------- */
-    (function initForm() {
-      var form = document.getElementById('booking-form');
-      var resultEl = document.getElementById('form-result');
-      if (!form) return;
-      form.addEventListener('submit', function (ev) {
-        var phone = form.querySelector('input[name="phone"]');
-        if (phone && !/^\d{10}$/.test(phone.value.trim())) {
-          ev.preventDefault();
-          if (resultEl) {
-            resultEl.textContent = 'Please enter a valid 10-digit phone number.';
-            resultEl.style.opacity = 1;
-          }
-          phone.focus();
-          return;
-        }
-        if (resultEl) {
-          resultEl.textContent = 'Sending...';
-          resultEl.style.opacity = 1;
-        }
-        // allow Formspree to handle actual submit — show friendly message
-        setTimeout(function () {
-          if (resultEl) resultEl.textContent = 'Thanks! We received your request. We will contact you soon.';
-          try { form.reset(); } catch (e) { /* ignore */ }
-          setTimeout(function () { if (resultEl) resultEl.style.opacity = 0; }, 6000);
-        }, 1200);
-      });
-    })();
+    /* ----------------- form UX (WhatsApp-only) ----------------- */
+(function initForm() {
+  var form = document.getElementById('booking-form');
+  var resultEl = document.getElementById('form-result');
+  if (!form) return;
+
+  // Change this to your WhatsApp number in international format (no +, no spaces)
+  var WHATSAPP_NUMBER = '919414196282';
+
+  // Helper: simple trim + safe text
+  function val(name) {
+    var el = form.querySelector('[name="' + name + '"]');
+    return el ? el.value.trim() : '';
+  }
+
+  function showStatus(msg, isError) {
+    if (!resultEl) return;
+    resultEl.textContent = msg;
+    resultEl.style.opacity = 1;
+    resultEl.style.color = isError ? '#b00020' : ''; // optional color
+    if (!isError) {
+      setTimeout(function () { resultEl.style.opacity = 0; }, 5000);
+    }
+  }
+
+  function buildMessage() {
+    var name = val('name') || '—';
+    var phone = val('phone') || '—';
+    var email = val('email') || '—';
+    var pickup = val('pickup') || '—';
+    var drop = val('drop') || '—';
+    var from_date = val('from_date') || '—';
+    var to_date = val('to_date') || '—';
+    var vehicle = val('vehicle') || '—';
+    var pkg = val('package') || '—';
+    var msg = val('message') || '—';
+
+    var lines = [
+      'New booking request — Vishnu Tours',
+      '',
+      'Name: ' + name,
+      'Phone: ' + phone,
+      'Email: ' + email,
+      'Pickup city: ' + pickup,
+      'Destination: ' + drop,
+      'From: ' + from_date,
+      'To: ' + to_date,
+      'Vehicle: ' + vehicle,
+      'Package: ' + pkg,
+      'Message: ' + msg,
+      '',
+      '— Sent from website'
+    ];
+    return lines.join('\n');
+  }
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+
+    // basic validation
+    var name = val('name'), phone = val('phone'), pickup = val('pickup'), drop = val('drop'), from_date = val('from_date');
+    if (!name) { showStatus('Please enter your name.', true); form.querySelector('[name="name"]').focus(); return; }
+    if (!/^\d{10}$/.test(phone)) { showStatus('Please enter a valid 10-digit phone number.', true); form.querySelector('[name="phone"]').focus(); return; }
+    if (!pickup) { showStatus('Please enter pickup city.', true); form.querySelector('[name="pickup"]').focus(); return; }
+    if (!drop) { showStatus('Please enter destination.', true); form.querySelector('[name="drop"]').focus(); return; }
+    if (!from_date) { showStatus('Please select a start date.', true); form.querySelector('[name="from_date"]').focus(); return; }
+
+    // Build message and encode for URL
+    var message = buildMessage();
+    var encoded = encodeURIComponent(message);
+
+    // WhatsApp URL (web + mobile support)
+    var waUrl = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encoded;
+
+    // UX: show sending state
+    showStatus('Opening WhatsApp…');
+
+    // Try open in new tab/window
+    var win = window.open(waUrl, '_blank');
+    if (win) {
+      // Focus the new window/tab and show success to user
+      try { win.focus(); } catch (e) { /* ignore */ }
+      showStatus('WhatsApp opened — please review the message and tap Send.');
+      // optional: reset form after small delay
+      setTimeout(function () { try { form.reset(); } catch (e) {} }, 800);
+    } else {
+      // Popup blocked or restricted — fallback: copy to clipboard and inform user
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(message).then(function () {
+          showStatus('Could not open WhatsApp automatically — message copied to clipboard. Paste it in WhatsApp to send.');
+        }, function () {
+          showStatus('Could not open WhatsApp or copy message — please send this message manually: ' + message, true);
+        });
+      } else {
+        // Old browsers: show final text for manual copy
+        showStatus('Could not open WhatsApp automatically. Please copy this message and send to ' + WHATSAPP_NUMBER + ':\n\n' + message, true);
+      }
+    }
+  });
+})();
+
 
     /* ------------- testimonials carousel ------------- */
     (function initTestimonials() {

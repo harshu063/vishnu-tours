@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 
-  <title>Vishnu Tours & Travels — Journey Like Royalty</title>
+  <title> Jodhpur Savari Cab</title>
 
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,376 +25,381 @@
 <body>
   <!-- HEADER / NAV -->
   <header id="site-header" class="site-header">
-  <div class="container header-inner">
-    <a href="#hero" class="logo-link"><span class="logo-mark">V</span> Vishnu Tours</a>
+    <div class="container header-inner">
+      <a href="#hero" class="logo-link">
+        <img src="assets/images/logo0.jpg" alt="Jodhpur Savari Cab" class="site-logo">
+          <span class="logo-text">Jodhpur Savari Cab</span>
 
-    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      </a>
 
-    <nav class="primary-nav" aria-label="Primary" id="primary-nav">
-      <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
 
-      <div class="nav-inner">
-        <button class="nav-close" id="nav-close" aria-label="Close menu">✕</button>
+      <nav class="primary-nav" aria-label="Primary" id="primary-nav">
+        <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
-        <ul class="nav-list" role="menu">
-          <li role="none"><a role="menuitem" href="#hero">Home</a></li>
-          <li role="none"><a role="menuitem" href="#tours">Tours</a></li>
-          <li role="none"><a role="menuitem" href="#fleet">Fleet</a></li>
-          <li role="none"><a role="menuitem" href="#testimonials">Testimonials</a></li>
-          <li role="none"><a role="menuitem" href="#booking">Contact</a></li>
-        </ul>
+        <div class="nav-inner">
+          <button class="nav-close" id="nav-close" aria-label="Close menu">✕</button>
 
-        <div class="nav-actions">
-          <a class="btn btn-primary nav-cta-mobile" href="#booking">Book Now</a>
-        </div>
-      </div>
-    </nav>
-  </div>
-</header>
-
-
-
-    <!-- HERO -->
-    <section id="hero" class="hero">
-      <div class="hero-bg" aria-hidden="true">
-        <picture>
-          <!-- if you later add webp, replace srcset here -->
-          <img src="assets/images/hero.jpg" alt="Dunes and a car on the road" loading="eager">
-        </picture>
-        <div class="hero-overlay"></div>
-      </div>
-
-      <div class="container hero-content">
-        <h1>Journey Like Royalty, Explore Like Home</h1>
-        <p class="lead">Comfort. Local expertise. Tailored tours across Rajasthan & Pan-India.</p>
-        <div class="hero-ctas">
-          <a href="#tours" class="btn btn-ghost">Explore Packages</a>
-          <a href="#booking" class="btn btn-primary">Book a Ride</a>
-        </div>
-
-        <div class="trust-strip">
-          <span>✅ Verified Drivers</span>
-          <span>•</span>
-          <span>🚗 Sanitized Vehicles</span>
-          <span>•</span>
-          <span>👨‍👩‍👧 Family-friendly</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- TOURS / PACKAGES -->
-    <section id="tours" class="section">
-      <div class="container">
-        <h2 class="section-title">Popular Packages</h2>
-
-        <div class="filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="rajasthan">Rajasthan</button>
-          <button class="filter-btn" data-filter="pan-india">Pan-India</button>
-          <button class="filter-btn" data-filter="family">Family</button>
-          <button class="filter-btn" data-filter="adventure">Adventure</button>
-        </div>
-
-        <div class="tours-grid">
-          <!-- Example card 1 -->
-          <article class="tour-card" data-region="rajasthan" data-type="family"
-            data-package="3 Days — Jaisalmer Desert Escape">
-            <div class="card-media">
-              <img src="assets/images/jsm.jpg" alt="Jaisalmer dunes" loading="lazy">
-            </div>
-            <div class="card-body">
-              <h3>3 Days — Jaisalmer Desert Escape</h3>
-              <ul class="card-bullets">
-                <li>2 Nights hotel</li>
-                <li>Camel safari & dunes sunset</li>
-                <li>Fort & local tour</li>
-              </ul>
-              <div class="card-foot">
-                <div class="card-cta">
-                  <button class="btn btn-outline btn-prefill" data-package="3 Days — Jaisalmer Desert Escape">Book This
-                    Package</button>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Example card 2 -->
-          <article class="tour-card" data-region="rajasthan" data-type="adventure"
-            data-package="2 Days — Udaipur Lake Retreat">
-            <div class="card-media">
-              <img src="assets/images/udp.jpg" alt="Udaipur palace" loading="lazy">
-            </div>
-            <div class="card-body">
-              <h3>2 Days — Udaipur Lake Retreat</h3>
-              <ul class="card-bullets">
-                <li>City palace & boat ride</li>
-                <li>Luxury Innova for transfers</li>
-              </ul>
-              <div class="card-foot">
-                <div class="card-cta">
-                  <button class="btn btn-outline btn-prefill" data-package="2 Days — Udaipur Lake Retreat">Book This
-                    Package</button>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Example card 3 -->
-          <article class="tour-card" data-region="pan-india" data-type="family"
-            data-package="Haridwar Spiritual Getaway">
-            <div class="card-media">
-              <img src="assets/images/hrw.jpg" alt="Haridwar Ganges" loading="lazy">
-            </div>
-            <div class="card-body">
-              <h3>Haridwar — Spiritual Getaway (Pan-India)</h3>
-              <ul class="card-bullets">
-                <li>Pilgrim tour & Ganga Aarti</li>
-                <li>Safe driver & family-friendly</li>
-              </ul>
-              <div class="card-foot">
-                <div class="card-cta">
-                  <button class="btn btn-outline btn-prefill" data-package="Haridwar — Spiritual Getaway">Book This
-                    Package</button>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div> <!-- .tours-grid -->
-      </div>
-    </section>
-
-    <!-- FLEET (slider) -->
-    <section id="fleet" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">Our Fleet</h2>
-
-        <div class="fleet-slider" aria-live="polite">
-          <button class="fleet-nav prev" aria-label="Previous vehicles">‹</button>
-
-          <div class="fleet-mover" role="list">
-            <article class="fleet-card" role="listitem" data-vehicle="Innova Crysta">
-              <img src="assets/images/crysta.jpg" alt="Innova Crysta" loading="lazy">
-              <div class="fleet-info">
-                <h4>Innova Crysta</h4>                <div class="amenities">AC • Music • Luggage</div>
-                <div class="pricing"> 16 per KM</div>
-                <button class="btn btn-outline btn-prefill" data-vehicle="Innova Crysta">Book this car</button>
-              </div>
-            </article>
-            <article class="fleet-card" role="listitem" data-vehicle="Tempo Traveller">
-              <img src="assets/images/hycross.jpg" alt="Tempo Traveller" loading="lazy">
-              <div class="fleet-info">
-                <h4>Hycross</h4>
-                <div class="amenities">AC • Large luggage</div>
-                <div class="pricing"> 18 per KM</div>
-
-                <button class="btn btn-outline btn-prefill" data-vehicle="Tempo Traveller">Book this car</button>
-              </div>
-            </article>
-
-            <article class="fleet-card" role="listitem" data-vehicle="Tempo Traveller">
-              <img src="assets/images/fortuner.jpg" alt="Tempo Traveller" loading="lazy">
-              <div class="fleet-info">
-                <h4>Fortuner</h4>
-                <h5>luxury</h5>
-                <div class="amenities">AC • Large luggage</div>
-                <div class="pricing"> 45 per KM</div>
-
-                <button class="btn btn-outline btn-prefill" data-vehicle="Tempo Traveller">Book this car</button>
-              </div>
-            </article>
-
-            <article class="fleet-card" role="listitem" data-vehicle="Sedan">
-              <img src="assets/images/sedan.jpg" alt="Sedan" loading="lazy">
-              <div class="fleet-info">
-                <h4>Sedan </h4>
-                <div class="amenities">AC • Comfort </div>
-                <div class="pricing"> 11 per KM</div>
-
-                <button class="btn btn-outline btn-prefill" data-vehicle="Sedan">Book this car</button>
-              </div>
-            </article>
-
-            <article class="fleet-card" role="listitem" data-vehicle="Tempo Traveller">
-              <img src="assets/images/tempo.jpg" alt="Tempo Traveller" loading="lazy">
-              <div class="fleet-info">
-                <h4>Tempo Traveller</h4>
-                <h5>17 Seater</h5>
-                <div class="amenities">AC • Large luggage</div>
-                <div class="pricing"> 24 per KM</div>
-
-                <button class="btn btn-outline btn-prefill" data-vehicle="Tempo Traveller">Book this car</button>
-              </div>
-            </article>
-            <article class="fleet-card" role="listitem" data-vehicle="Tempo Traveller">
-              <img src="assets/images/tempo24.jpg" alt="Tempo Traveller" loading="lazy">
-              <div class="fleet-info">
-                <h4>Tempo Traveller </h4>
-                <h5>24 Seater</h5>
-                <div class="amenities">AC • Large luggage</div>
-                <div class="pricing"> 30 per KM</div>
-
-                <button class="btn btn-outline btn-prefill" data-vehicle="Tempo Traveller">Book this car</button>
-              </div>
-            </article>
-            <article class="fleet-card" role="listitem" data-vehicle="Tempo Traveller">
-              <img src="assets/images/urbania.jpg" alt="Tempo Traveller" loading="lazy">
-              <div class="fleet-info">
-                <h4>Urbania</h4>
-                <div class="amenities">AC • Large luggage</div>
-                <button class="btn btn-outline btn-prefill" data-vehicle="Tempo Traveller">Book this car</button>
-              </div>
-            </article>
-
-
-            <!-- add more fleet-card items here if needed -->
-          </div>
-
-          <button class="fleet-nav next" aria-label="Next vehicles">›</button>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- USP -->
-    <section id="usp" class="section">
-      <div class="container">
-        <h2 class="section-title">Why Choose Vishnu Tours</h2>
-        <div class="usp-grid">
-          <div class="usp-item">
-            <div class="usp-icon">🚗</div>
-            <h4>Comfort First</h4>
-            <p>Sanitized & comfortable vehicles for family safety.</p>
-          </div>
-          <div class="usp-item">
-            <div class="usp-icon">🧭</div>
-            <h4>Local Expertise</h4>
-            <p>Drivers who know the best routes & hidden spots.</p>
-          </div>
-          <div class="usp-item">
-            <div class="usp-icon">🤝</div>
-            <h4>Trusted Service</h4>
-            <p>Transparent pricing and verified drivers.</p>
-          </div>
-          <div class="usp-item">
-            <div class="usp-icon">⭐</div>
-            <h4>Family Friendly</h4>
-            <p>Child seats & flexible itineraries for families.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">What Our Travelers Say</h2>
-
-        <div class="testimonials-wrap">
-          <article class="testimonial">
-            <p class="quote">"Amazing service — the driver was punctual and the Innova was spotless. Highly
-              recommended!"</p>
-            <div class="meta"><strong>Ramesh K.</strong> — ⭐⭐⭐⭐⭐</div>
-          </article>
-          <article class="testimonial">
-            <p class="quote">"We did the Jaisalmer package. Perfect planning and comfortable rides for our family."</p>
-            <div class="meta"><strong>Priya S.</strong> — ⭐⭐⭐⭐⭐</div>
-          </article>
-          <article class="testimonial">
-            <p class="quote">"Booking was fast and the team followed up over WhatsApp. Smooth experience."</p>
-            <div class="meta"><strong>John D.</strong> — ⭐⭐⭐⭐</div>
-          </article>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- BOOKING / CONTACT -->
-    <section id="booking" class="section">
-      <div class="container booking-grid">
-        <div class="booking-left">
-          <h2>Plan Your Trip With Vishnu Tours</h2>
-          <p>Tell us where & when — we’ll handle the rest. Family trips, temple visits, city tours, and pan-India
-            travel.</p>
-          <p><strong>Call / WhatsApp:</strong> <a href="tel:+919414196282">+91-9414196282</a></p>
-          <a class="map-thumb" href="#" target="_blank" rel="noopener">
-            <img src="assets/images/map-thumb.jpg" alt="Map to Vishnu Tours office" loading="lazy">
-          </a>
-        </div>
-
-        <form id="booking-form" class="booking-form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
-          <label>Full name<input type="text" name="name" required></label>
-          <label>Phone<input type="tel" name="phone" pattern="[0-9]{10}" placeholder="9876543210" required></label>
-          <label>Email (optional)<input type="email" name="email" placeholder="name@example.com"></label>
-          <label>Pickup city<input type="text" name="pickup" required></label>
-          <label>Destination / Drop<input type="text" name="drop" required></label>
-          <label>From<input type="date" name="from_date" required></label>
-          <label>To<input type="date" name="to_date"></label>
-          <label>Vehicle
-            <select name="vehicle" id="vehicle-select">
-              <option value="">Select vehicle</option>
-              <option>Innova Crysta</option>
-              <option>Sedan</option>
-              <option>Tempo Traveller</option>
-            </select>
-          </label>
-          <label>Package (auto-filled when booking from a package)
-            <input type="text" name="package" id="package-input" placeholder="Optional">
-          </label>
-          <label>Message<textarea name="message" rows="3" placeholder="Any special requests..."></textarea></label>
-
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Request Booking</button>
-            <a class="btn btn-ghost" id="whatsapp-fallback"
-              href="https://wa.me/919414196282?text=Hi%20Vishnu%20Tours%2C%20I%20want%20to%20book%20a%20trip"
-              target="_blank" rel="noopener">Message on WhatsApp</a>
-          </div>
-
-          <p class="privacy-note">We will use your contact details to confirm your booking. No spam.</p>
-          <div id="form-result" class="form-result" aria-live="polite"></div>
-        </form>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer id="site-footer" class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-col">
-          <h4>Vishnu Tours & Travels</h4>
-          <p>Comfort, trust and royal journeys from Jodhpur across India.</p>
-        </div>
-
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#tours">Tours</a></li>
-            <li><a href="#fleet">Fleet</a></li>
-            <li><a href="#booking">Contact</a></li>
+          <ul class="nav-list" role="menu">
+            <li role="none"><a role="menuitem" href="#hero">Home</a></li>
+            <li role="none"><a role="menuitem" href="#tours">Tours</a></li>
+            <li role="none"><a role="menuitem" href="#fleet">Fleet</a></li>
+            <li role="none"><a role="menuitem" href="#testimonials">Testimonials</a></li>
+            <li role="none"><a role="menuitem" href="#booking">Contact</a></li>
           </ul>
-        </div>
 
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <p>📞 <a href="tel:+919414196282">+91-9414196282</a></p>
+          <div class="nav-actions">
+            <a class="btn btn-primary nav-cta-mobile" href="#booking">Book Now</a>
+          </div>
         </div>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <picture>
+        <!-- if you later add webp, replace srcset here -->
+        <img src="assets/images/hero.jpg" alt="Dunes and a car on the road" loading="eager">
+      </picture>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <h1>Get Your Cab </h1>
+            <h1>Get Your Car Taxi </h1>
+
+      <p class="lead">Comfort. Local expertise. Tailored tours across Rajasthan & Pan-India.</p>
+      <div class="hero-ctas">
+        <a href="#tours" class="btn btn-ghost">Explore Packages</a>
+        <a href="#booking" class="btn btn-primary">Book a Ride</a>
       </div>
 
-      <div class="site-note container">
-        <small>© 2025 Vishnu Tours & Travels</small>
+      <div class="trust-strip">
+        <span>✅ Verified Drivers</span>
+        <span>•</span>
+        <span>🚗 Sanitized Vehicles</span>
+        <span>•</span>
+        <span>👨‍👩‍👧 Family-friendly</span>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <!-- Persistent WhatsApp popup (visible all pages) -->
-    <a class="whatsapp-popup"
-      href="https://wa.me/919414196282?text=Hi%20Vishnu%20Tours%2C%20I%20want%20to%20book%20a%20trip" target="_blank"
-      rel="noopener" aria-label="Chat with Vishnu Tours on WhatsApp">
-      <span class="wp-icon" aria-hidden="true">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path fill="#fff"
-            d="M20.52 3.48A11.9 11.9 0 0012 0C5.373 0 .03 5.343.03 12a11.7 11.7 0 001.61 5.92L0 24l6.41-1.66A11.92 11.92 0 0012 24c6.627 0 12-5.373 12-12 0-1.97-.47-3.82-1.48-5.52zM12 21.6c-.92 0-1.83-.22-2.64-.64l-.19-.1-3.11.81.82-3.04-.12-.2A9.6 9.6 0 012.4 12 9.6 9.6 0 0112 2.4 9.6 9.6 0 0121.6 12 9.6 9.6 0 0112 21.6z" />
-        </svg>
-      </span>
-      <span class="wp-text">Chat on WhatsApp</span>
-    </a>
+  <!-- TOURS / PACKAGES -->
+  <section id="tours" class="section">
+    <div class="container">
+      <h2 class="section-title">Popular Packages</h2>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="rajasthan">Rajasthan</button>
+        <button class="filter-btn" data-filter="pan-india">Pan-India</button>
+        <button class="filter-btn" data-filter="family">Family</button>
+        <button class="filter-btn" data-filter="adventure">Adventure</button>
+      </div>
+
+      <div class="tours-grid">
+        <!-- Example card 1 -->
+        <article class="tour-card" data-region="rajasthan" data-type="family"
+          data-package="3 Days — Jaisalmer Desert Escape">
+          <div class="card-media">
+            <img src="assets/images/jsm.jpg" alt="Jaisalmer dunes" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>3 Days — Jaisalmer Desert Escape</h3>
+            <ul class="card-bullets">
+              <li>2 Nights hotel</li>
+              <li>Camel safari & dunes sunset</li>
+              <li>Fort & local tour</li>
+            </ul>
+            <div class="card-foot">
+              <div class="card-cta">
+                <button class="btn btn-outline btn-prefill" data-package="3 Days — Jaisalmer Desert Escape">Book This
+                  Package</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Example card 2 -->
+        <article class="tour-card" data-region="rajasthan" data-type="adventure"
+          data-package="2 Days — Udaipur Lake Retreat">
+          <div class="card-media">
+            <img src="assets/images/udp.jpg" alt="Udaipur palace" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>2 Days — Udaipur Lake Retreat</h3>
+            <ul class="card-bullets">
+              <li>City palace & boat ride</li>
+              <li>Luxury Innova for transfers</li>
+            </ul>
+            <div class="card-foot">
+              <div class="card-cta">
+                <button class="btn btn-outline btn-prefill" data-package="2 Days — Udaipur Lake Retreat">Book This
+                  Package</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Example card 3 -->
+        <article class="tour-card" data-region="pan-india" data-type="family" data-package="Haridwar Spiritual Getaway">
+          <div class="card-media">
+            <img src="assets/images/hrw.jpg" alt="Haridwar Ganges" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Haridwar — Spiritual Getaway (Pan-India)</h3>
+            <ul class="card-bullets">
+              <li>Pilgrim tour & Ganga Aarti</li>
+              <li>Safe driver & family-friendly</li>
+            </ul>
+            <div class="card-foot">
+              <div class="card-cta">
+                <button class="btn btn-outline btn-prefill" data-package="Haridwar — Spiritual Getaway">Book This
+                  Package</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div> <!-- .tours-grid -->
+    </div>
+  </section>
+
+  <!-- FLEET (slider) -->
+  <section id="fleet" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Our Fleet</h2>
+
+      <div class="fleet-slider" aria-live="polite">
+        <button class="fleet-nav prev" aria-label="Previous vehicles">‹</button>
+
+        <div class="fleet-mover" role="list">
+          <article class="fleet-card" role="listitem" data-vehicle="Innova Crysta">
+            <img src="assets/images/crysta.jpg" alt="Innova Crysta" loading="lazy">
+            <div class="fleet-info">
+              <h4>Innova Crysta</h4>
+              <div class="amenities">AC • Music • Luggage</div>
+              <div class="pricing"> ₹16 per KM</div>
+              <button class="btn btn-outline btn-prefill" data-vehicle="Innova Crysta">Book this car</button>
+            </div>
+          </article>
+          <article class="fleet-card" role="listitem" data-vehicle="Tempo Traveller">
+            <img src="assets/images/hycross.jpg" alt="Tempo Traveller" loading="lazy">
+            <div class="fleet-info">
+              <h4>Hycross</h4>
+              <div class="amenities">AC • Large luggage</div>
+              <div class="pricing"> ₹18 per KM</div>
+
+              <button class="btn btn-outline btn-prefill" data-vehicle="Tempo Traveller">Book this car</button>
+            </div>
+          </article>
+
+          <article class="fleet-card" role="listitem" data-vehicle="Tempo Traveller">
+            <img src="assets/images/fortunerr.jpg" alt="Tempo Traveller" loading="lazy">
+            <div class="fleet-info">
+              <h4>Fortuner</h4>
+              <div class="amenities">AC • Large luggage</div>
+              <div class="pricing"> ₹45 per KM</div>
+
+              <button class="btn btn-outline btn-prefill" data-vehicle="Tempo Traveller">Book this car</button>
+            </div>
+          </article>
+
+          <article class="fleet-card" role="listitem" data-vehicle="Sedan">
+            <img src="assets/images/etios.jpg" alt="Sedan" loading="lazy">
+            <div class="fleet-info">
+              <h4>Etios Sedan </h4>
+              <div class="amenities">AC • Comfort </div>
+              <div class="pricing"> ₹11 per KM</div>
+
+              <button class="btn btn-outline btn-prefill" data-vehicle="Sedan">Book this car</button>
+            </div>
+          </article>
+
+          <article class="fleet-card" role="listitem" data-vehicle="Tempo Traveller">
+            <img src="assets/images/tempo.jpg" alt="Tempo Traveller" loading="lazy">
+            <div class="fleet-info">
+              <h4>Tempo Traveller</h4>
+              <h5>17 Seater</h5>
+              <div class="amenities">AC • Large luggage</div>
+              <div class="pricing"> ₹24 per KM</div>
+
+              <button class="btn btn-outline btn-prefill" data-vehicle="Tempo Traveller">Book this car</button>
+            </div>
+          </article>
+          <article class="fleet-card" role="listitem" data-vehicle="Tempo Traveller">
+            <img src="assets/images/tempo.jpg" alt="Tempo Traveller" loading="lazy">
+            <div class="fleet-info">
+              <h4>Tempo Traveller </h4>
+              <h5>24 Seater</h5>
+              <div class="amenities">AC • Large luggage</div>
+              <div class="pricing"> ₹30 per KM</div>
+
+              <button class="btn btn-outline btn-prefill" data-vehicle="Tempo Traveller">Book this car</button>
+            </div>
+          </article>
+          <article class="fleet-card" role="listitem" data-vehicle="Tempo Traveller">
+            <img src="assets/images/urbaniaa.jpg" alt="Tempo Traveller" loading="lazy">
+            <div class="fleet-info">
+              <h4>Urbania</h4>
+              <div class="amenities">AC • Large luggage</div>
+                            <div class="pricing"> ₹30 per KM</div>
+              <button class="btn btn-outline btn-prefill" data-vehicle="Tempo Traveller">Book this car</button>
+            </div>
+          </article>
+
+
+          <!-- add more fleet-card items here if needed -->
+        </div>
+
+        <button class="fleet-nav next" aria-label="Next vehicles">›</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- USP -->
+  <section id="usp" class="section">
+    <div class="container">
+      <h2 class="section-title">Why Choose Jodhpur Savari Cab </h2>
+      <div class="usp-grid">
+        <div class="usp-item">
+          <div class="usp-icon">🚗</div>
+          <h4>Comfort First</h4>
+          <p>Sanitized & comfortable vehicles for family safety.</p>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">🧭</div>
+          <h4>Local Expertise</h4>
+          <p>Drivers who know the best routes & hidden spots.</p>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">🤝</div>
+          <h4>Trusted Service</h4>
+          <p>Transparent pricing and verified drivers.</p>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">⭐</div>
+          <h4>Family Friendly</h4>
+          <p>Child seats & flexible itineraries for families.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">What Our Travelers Say</h2>
+
+      <div class="testimonials-wrap">
+        <article class="testimonial">
+          <p class="quote">"Amazing service — the driver was punctual and the Innova was spotless. Highly
+            recommended!"</p>
+          <div class="meta"><strong>Ramesh K.</strong> — ⭐⭐⭐⭐⭐</div>
+        </article>
+        <article class="testimonial">
+          <p class="quote">"We did the Jaisalmer package. Perfect planning and comfortable rides for our family."</p>
+          <div class="meta"><strong>Priya S.</strong> — ⭐⭐⭐⭐⭐</div>
+        </article>
+        <article class="testimonial">
+          <p class="quote">"Booking was fast and the team followed up over WhatsApp. Smooth experience."</p>
+          <div class="meta"><strong>John D.</strong> — ⭐⭐⭐⭐</div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOOKING / CONTACT -->
+  <section id="booking" class="section">
+    <div class="container booking-grid">
+      <div class="booking-left">
+        <h2>Plan Your Trip With  Tours</h2>
+        <p>Tell us where & when — we’ll handle the rest. Family trips, temple visits, city tours, and pan-India
+          travel.</p>
+        <p><strong>Call / WhatsApp:</strong> <a href="tel:+919414196282">+91-9414196282</a></p>
+        <a class="map-thumb" href="#" target="_blank" rel="noopener">
+          <img src="assets/images/map-thumb.jpg" alt="Map to Jodhpur Savari Cab office" loading="lazy">
+        </a>
+      </div>
+
+      <form id="booking-form" class="booking-form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+        <label>Full name<input type="text" name="name" required></label>
+        <label>Phone<input type="tel" name="phone" pattern="[0-9]{10}" placeholder="9876543210" required></label>
+        <label>Email (optional)<input type="email" name="email" placeholder="name@example.com"></label>
+        <label>Pickup city<input type="text" name="pickup" required></label>
+        <label>Destination / Drop<input type="text" name="drop" required></label>
+        <label>From<input type="date" name="from_date" required></label>
+        <label>To<input type="date" name="to_date"></label>
+        <label>Vehicle
+          <select name="vehicle" id="vehicle-select">
+            <option value="">Select vehicle</option>
+            <option>Innova Crysta</option>
+            <option>Sedan</option>
+            <option>Tempo Traveller</option>
+          </select>
+        </label>
+        <label>Package (auto-filled when booking from a package)
+          <input type="text" name="package" id="package-input" placeholder="Optional">
+        </label>
+        <label>Message<textarea name="message" rows="3" placeholder="Any special requests..."></textarea></label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Request Booking</button>
+          <a class="btn btn-ghost" id="whatsapp-fallback"
+            href="https://wa.me/919414196282?text=Hi%20Jodhpur%20Savari%20Cab%2C%20I%20want%20to%20book%20a%20trip"
+            target="_blank" rel="noopener">Message on WhatsApp</a>
+        </div>
+
+        <p class="privacy-note">We will use your contact details to confirm your booking. No spam.</p>
+        <div id="form-result" class="form-result" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="site-footer" class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h4> Jodhpur Savari Cab</h4>
+        <p>Comfort, trust and royal journeys from Jodhpur across India.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#tours">Tours</a></li>
+          <li><a href="#fleet">Fleet</a></li>
+          <li><a href="#booking">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📞 <a href="tel:+919414196282">+91-9414196282</a></p>
+      </div>
+    </div>
+
+    <div class="site-note container">
+    </div>
+  </footer>
+
+  <!-- Persistent WhatsApp popup (visible all pages) -->
+  <a class="whatsapp-popup"
+    href="https://wa.me/919414196282?text=Hi%20Jodhpur%20Savari%20Cab%2C%20I%20want%20to%20book%20a%20trip" target="_blank"
+    rel="noopener" aria-label="Chat with Jodhpur Savari Cab on WhatsApp">
+    <span class="wp-icon" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path fill="#fff"
+          d="M20.52 3.48A11.9 11.9 0 0012 0C5.373 0 .03 5.343.03 12a11.7 11.7 0 001.61 5.92L0 24l6.41-1.66A11.92 11.92 0 0012 24c6.627 0 12-5.373 12-12 0-1.97-.47-3.82-1.48-5.52zM12 21.6c-.92 0-1.83-.22-2.64-.64l-.19-.1-3.11.81.82-3.04-.12-.2A9.6 9.6 0 012.4 12 9.6 9.6 0 0112 2.4 9.6 9.6 0 0121.6 12 9.6 9.6 0 0112 21.6z" />
+      </svg>
+    </span>
+    <span class="wp-text">Chat on WhatsApp</span>
+  </a>
 
 </body>
 
